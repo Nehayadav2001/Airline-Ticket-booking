@@ -42,6 +42,15 @@ namespace AirlineProject
         protected global::System.Web.UI.WebControls.DropDownList drp_arline;
 
         /// <summary>
+        /// error_airname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label error_airname;
+
+        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -60,13 +69,13 @@ namespace AirlineProject
         protected global::System.Web.UI.WebControls.DropDownList drp_from;
 
         /// <summary>
-        /// Label4 control.
+        /// error_from control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label error_from;
 
         /// <summary>
         /// drp_arrival control.
@@ -76,6 +85,15 @@ namespace AirlineProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList drp_arrival;
+
+        /// <summary>
+        /// error_Arrival control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label error_Arrival;
 
         /// <summary>
         /// date_date control.
@@ -94,6 +112,15 @@ namespace AirlineProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList drp_class;
+
+        /// <summary>
+        /// class_errortry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label class_errortry;
 
         /// <summary>
         /// txt_prc control.

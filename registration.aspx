@@ -38,7 +38,8 @@
                     <asp:Label runat="server">Select Gender:</asp:Label> 
                     <asp:RadioButtonList ID="rd_gender" runat="server" name="genderg"> 
                     </asp:RadioButtonList>
-                      <span id="gender_error" style="color: red;"></span>
+                    <span id="gender_error" style="color: red;"></span>
+                    <asp:Label ID="gender_errortry" runat="server" Text="" Style="color: red;"></asp:Label>
                 </div>
                 <div class="textbox">
                     <asp:label runat="server" for="txt_pass">Password:</asp:label>

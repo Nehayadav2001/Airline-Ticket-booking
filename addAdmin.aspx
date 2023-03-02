@@ -36,6 +36,7 @@
                 <asp:DropDownList ID="drp_arline" runat="server" AppendDataBoundItems="true">   
                     <asp:ListItem Value="0">Select </asp:ListItem></asp:DropDownList>
                    <div id="error-messageAir" style="color: red"></div>
+                   <asp:Label ID="error_airname" runat="server" Text="" Style="color: red;"></asp:Label>
               </div>  
               <br/>
             <div>  
@@ -43,13 +44,15 @@
                     <asp:DropDownList ID="drp_from" runat="server" AppendDataBoundItems="true">   
                     <asp:ListItem Value="0">Select </asp:ListItem></asp:DropDownList>
                     <div id="error-messagedepart" style="color: red"></div>
+                 <asp:Label ID="error_from" runat="server" Text="" Style="color: red;"></asp:Label>
                <br/>
             </div>
             <div>  
-                <asp:Label ID="Label4" runat="server" Text="Destination" Width="90px" ></asp:Label>
+                <asp:Label runat="server" Text="Destination" Width="90px" ></asp:Label>
                 <asp:DropDownList ID="drp_arrival" runat="server" AppendDataBoundItems="true">   
                     <asp:ListItem Value="0">Select </asp:ListItem></asp:DropDownList>  
                     <div id="error-messageArrival" style="color: red"></div>
+                <asp:Label ID="error_Arrival" runat="server" Text="" Style="color: red;"></asp:Label>
             </div>
                  <br/><br/>
             <div>  
@@ -63,6 +66,7 @@
 				    <asp:DropDownList ID="drp_class" runat="server" AppendDataBoundItems="true">
 				    <asp:ListItem Value="0">Select </asp:ListItem></asp:DropDownList>
                 <div id="error-messageClass" style="color: red"></div>
+                <asp:Label ID="class_errortry" runat="server" Text="" Style="color: red;"></asp:Label>
 		   </div>
             <br/><br/>
            <div>  

@@ -42,21 +42,30 @@ namespace AirlineProject
         protected global::System.Web.UI.WebControls.TextBox txt_pass;
 
         /// <summary>
-        /// btn_btn1 control.
+        /// btn_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_btn1;
+        protected global::System.Web.UI.WebControls.Button btn_btn;
 
         /// <summary>
-        /// Label control.
+        /// errorMessage_login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label;
+        protected global::System.Web.UI.WebControls.Label errorMessage_login;
+
+        /// <summary>
+        /// txt_wrongpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_wrongpass;
     }
 }

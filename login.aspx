@@ -24,8 +24,9 @@
 				<a href="registration.aspx">New User? Register Here</a>
 				<a href="adminlogin.aspx">Admin Login</a>
 			</div>
+			<asp:Label ID="errorMessage_login" runat="server" Visible="false"></asp:Label>
 			<div align="center">
-				<asp:Label ID="Label" runat="server" Text="" Visible="false" Width="316px" ForeColor="Red"></asp:Label>
+				<asp:Label ID="txt_wrongpass" runat="server" Text="" Visible="false" Width="316px" ForeColor="Red"></asp:Label>
 			</div>
 		</div>
 	</form>

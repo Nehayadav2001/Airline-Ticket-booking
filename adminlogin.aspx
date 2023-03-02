@@ -19,12 +19,15 @@
 				<i class="fas fa-lock"></i>
 				<asp:TextBox ID="txt_pass" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
 			</div>
-			<asp:Button ID="btn_btn1" runat="server" type="submit" Text="Login" CssClass="btn" />
-			<div class="links">				
-				<a href="admin.aspx">Admin Page</a>
+			<div>
+				<asp:Button ID="btn_btn" runat="server" type="submit" Text="Login" CssClass="btn" OnClick="btn_btn_Click" />				
 			</div>
+			<asp:Label ID="errorMessage_login" runat="server" Visible="false"></asp:Label>
 			<div align="center">
-				<asp:Label ID="Label" runat="server" Text="" Visible="false" Width="316px" ForeColor="Red"></asp:Label>
+				<asp:Label ID="txt_wrongpass" runat="server" Text="" Visible="false" Width="316px" ForeColor="Red"></asp:Label>
+			</div>
+			<div class="links">
+				<a href="registration.aspx">User Register Here</a>				
 			</div>
 		</div>
 	</form>

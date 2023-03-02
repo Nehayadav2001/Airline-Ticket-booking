@@ -24,19 +24,26 @@ namespace AirlineProject
             DataTable dt = new DataTable();
             string conStr;
 
-            conStr = ConfigurationManager.ConnectionStrings["Sqlconnection"].ConnectionString;
-            using (con = new SqlConnection(conStr))
+            try
             {
-                using (cmd = new SqlCommand("ny_getbookingdata", con))
+                conStr = ConfigurationManager.ConnectionStrings["Sqlconnection"].ConnectionString;
+                using (con = new SqlConnection(conStr))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    adr = new SqlDataAdapter(cmd);
-                    //dt = new DataTable();
-                    adr.Fill(dt);
+                    using (cmd = new SqlCommand("ny_getbookingdata", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        adr = new SqlDataAdapter(cmd);
+                        adr.Fill(dt);
+                    }
                 }
+                getdata.DataSource = dt;
+                getdata.DataBind();
             }
-            getdata.DataSource = dt;
-            getdata.DataBind();
+            catch (Exception ex)
+            {
+                string message = "An error occurred while retrieving the booking details: " + ex.Message;
+                ClientScript.RegisterStartupScript(GetType(), "alert", "alert('" + message + "');", true);
+            }
         }
     }
 }

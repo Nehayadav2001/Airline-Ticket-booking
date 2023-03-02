@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.Ajax.Utilities;
+using System.Runtime.InteropServices;
+using System.Security.AccessControl;
 
 namespace AirlineProject
 {
@@ -20,34 +22,47 @@ namespace AirlineProject
 
         protected void btn_btn1_Click(object sender, EventArgs e)
         {
-            SqlConnection con;
-            SqlCommand cmd;
-            string conStr;
-
-            conStr = ConfigurationManager.ConnectionStrings["Sqlconnection"].ConnectionString;
-            using (con = new SqlConnection(conStr))
+            try
             {
-                using (cmd = new SqlCommand("CheckUser", con))
+                SqlConnection con;
+                SqlCommand cmd;
+                string conStr;
+
+                conStr = ConfigurationManager.ConnectionStrings["Sqlconnection"].ConnectionString;
+                using (con = new SqlConnection(conStr))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    SqlParameter p1 = new SqlParameter("username", txt_user.Text);
-                    SqlParameter p2 = new SqlParameter("password", txt_pass.Text);
-                    cmd.Parameters.Add(p1);
-                    cmd.Parameters.Add(p2);
-                    con.Open();
-                    SqlDataReader rd = cmd.ExecuteReader();
-                    if (rd.HasRows)
+                    using (cmd = new SqlCommand("CheckUser", con))
                     {
-                        rd.Read();
-                        Response.Redirect("home.aspx");
-                    }
-                    else
-                    {                    
-                        Label.Text = "Invalid username or password.";
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        SqlParameter p1 = new SqlParameter("username", txt_user.Text);
+                        SqlParameter p2 = new SqlParameter("password", txt_pass.Text);
+                        cmd.Parameters.Add(p1);
+                        cmd.Parameters.Add(p2);
+                        con.Open();
+                        SqlDataReader rd = cmd.ExecuteReader();
+                        if (rd.HasRows)
+                        {
+                            rd.Read();
+                            Response.Redirect("home.aspx");
+                        }
+                        else
+                        {
+                            txt_wrongpass.Text = "Invalid username or password.";
+                            txt_wrongpass.Visible = true;
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                string errorMessage = "Error: " + ex.ToString();
+                errorMessage_login.Visible = true;
+                errorMessage_login.Text = "An error occurred while login In Website.Please try again later.";
+            }
         }
+
+
+
     }
 
-}
+    }

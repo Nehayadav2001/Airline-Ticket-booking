@@ -69,6 +69,15 @@ namespace AirlineProject
         protected global::System.Web.UI.WebControls.RadioButtonList rd_gender;
 
         /// <summary>
+        /// gender_errortry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label gender_errortry;
+
+        /// <summary>
         /// txt_pass control.
         /// </summary>
         /// <remarks>
